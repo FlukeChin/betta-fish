@@ -1,0 +1,26 @@
+<h3>รายงานปัญหาของผู้เชี่ยวชาญ</h3>
+<nav class="nav">
+
+    <a class="nav-link active" routerLink="/reportuser" href="#">User</a>
+    <a class="nav-link active" routerLink="/reportexpert"href="#">Expert</a>
+   
+  </nav>
+  <br>
+<table class='table'>
+<thead>
+<tr>
+<td>Action</td>
+<td>เรื่อง</td>
+<td>email</td>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let data of Expert">
+<td>
+<button type="button" (click)="delexpert(data)" >Delete</button>
+</td>
+<td>{{data.value.Phone}}</td>
+<td>{{data.value.Email}}</td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,81 @@
+<nav class="nav">
+        <a class="nav-link active" routerLink="/expert" href="#">กลับ</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<h3>แก้ไขบัญชีผู้เชี่ยวชาญ</h3>
+</nav>
+    <hr>
+    <br>
+<form (ngSubmit)="addexpert(expertForm)" #expertForm="ngForm">
+<div class="form-row">
+ <div class="col">
+     <label for="firstname">First Name</label>
+   <input type="text" class="form-control" placeholder="First name" name="FirstName" ngModel [(ngModel)]="expert.FirstName">
+ </div>
+ <div class="col">
+     <label for="lastname">Last Name</label>
+   <input type="text" class="form-control" placeholder="Last name" name="LastName" ngModel [(ngModel)]="expert.LastName">
+ </div>
+</div>
+<br>
+<div class="form-row">
+     <div class="form-group col-md-6">
+       <label for="inputEmail4">Email</label>
+       <input type="email" class="form-control" id="inputEmail4" placeholder="Email" name="Email" ngModel [(ngModel)]="expert.Email">
+     </div>
+     <div class="form-group col-md-6">
+       <label for="inputPassword4">Password</label>
+       <input type="password" class="form-control" id="inputPassword4" placeholder="Password" name="Password" ngModel [(ngModel)]="expert.Password">
+     </div>
+   </div>
+
+
+<div class="form-row">
+ <div class="form-group col-md-4">
+   <label for="inputPhone">Phone</label>
+   <input type="text" class="form-control" id="inputPhone"placeholder="+66" name="Phone" ngModel [(ngModel)]="expert.Phone">
+ </div>
+ <div class="form-group col-md-3">
+  <label for="inputState">ชนิดปลากัดที่เชี่ยวชาญ</label>
+  <select id="inputState" class="form-control" name="TypeFish" ngModel [(ngModel)]="expert.TypeFish">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</div>
+ <div class="form-group col-md-3">
+   <label for="inputState">จำนวนปลากัดสูงสุดที่รับวิเคราะห์</label>
+   <select id="inputState" class="form-control" name="LimitFish" ngModel [(ngModel)]="expert.LimitFish">
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+     <option value="6">6</option>
+     <option value="7">7</option>
+     <option value="8">8</option>
+     <option value="9">9</option>
+     <option value="10">10</option>
+   </select>
+ </div>
+</div>
+
+
+
+<div class="form-group">
+ <label for="exampleFormControlTextarea1">Portfolio
+ </label>
+ <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"name="Portfolio" ngModel [(ngModel)]="expert.Portfolio"></textarea>
+</div>
+
+<button type="submit" class="btn btn-primary">ยืนยัน</button>
+
+
+</form>
+
+

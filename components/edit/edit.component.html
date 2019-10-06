@@ -1,0 +1,9 @@
+<h4>แก้ไขข้อมูล</h4>
+<form (ngSubmit)="adduser(userForm)" #userForm="ngForm">
+    <label for="name"> Name</label>
+    <input type="text" name="name" ngModel [(ngModel)]="user.name">
+    <label for="description"> Description</label>
+    <input type="text" name="description" ngModel [(ngModel)]="user.description">
+    <button type="submit">ยืนยัน</button>
+    </form>
+    <a routerLink="/account">ย้อนกลับ</a>
