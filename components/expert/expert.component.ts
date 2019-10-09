@@ -10,14 +10,15 @@ import {FirebaseService} from '../../service/firebase-service.service';
   styleUrls: ['./expert.component.scss']
 })
 export class ExpertComponent implements OnInit {
-  Expert: any[];
+  Experts: any[];
 
-  constructor(private router: Router, private auth: AuthService, db: AngularFireDatabase, private firebaseService: FirebaseService) {
+  constructor(private router: Router, public auth: AuthService, db: AngularFireDatabase, private firebaseService: FirebaseService) {
 
   }
 
-  ngOnInit() {this.firebaseService.getexpertList().subscribe(items => {
-    this.Expert = items;
+  ngOnInit() {
+    this.firebaseService.getexpertList().subscribe(items => {
+    this.Experts = items;
     });
   }
   editexpert(data) {

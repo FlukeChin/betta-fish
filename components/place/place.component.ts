@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { NgForm } from '@angular/forms';
+import { AngularFireStorage } from 'angularfire2/storage';
 
 @Component({
   selector: 'app-place',
@@ -10,9 +11,10 @@ import { NgForm } from '@angular/forms';
 })
 export class PlaceComponent implements OnInit {
   constructor(private db: AngularFirestore) { }
-  ngOnInit() {}
-  addexpert(data: NgForm) {
-       this.db.collection('/Place').add(data.value);
+  ngOnInit() {
+    this.db.collection('Expert').valueChanges().subscribe(val => console.log(val));
   }
-
+  addplace(data: NgForm) {
+    this.db.collection('/Events').add(data.value);
+}
 }

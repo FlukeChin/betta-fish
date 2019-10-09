@@ -10,12 +10,12 @@ import {FirebaseService} from '../../service/firebase-service.service';
   styleUrls: ['./reportuser.component.scss']
 })
 export class ReportuserComponent implements OnInit {
-  User: any[];
+  ReportFromUser: any[];
 
   constructor(private router: Router, private auth: AuthService, db: AngularFireDatabase, private firebaseService: FirebaseService) { }
 
-  ngOnInit() {this.firebaseService.getuserList().subscribe(items => {
-    this.User = items;
+  ngOnInit() {this.firebaseService.getreportfromuserList().subscribe(items => {
+    this.ReportFromUser = items;
     });
   }
   deluser(data) {

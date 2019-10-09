@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireStorage } from 'angularfire2/storage';
-import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
+
+
 
 @Component({
   selector: 'app-uploadimg',
@@ -10,11 +11,11 @@ import { NgForm } from '@angular/forms';
 })
 export class UploadimgComponent implements OnInit {
 
-  constructor(private router: Router, private afStorage: AngularFireStorage) { }
+  constructor(private afs: AngularFirestore) {
 
-  upload(event) {
-    this.afStorage.upload('/imglocation/to/this-path', event.target.files[0]);
-  }
+   }
+
+
   ngOnInit() {
   }
 

@@ -1,2 +1,17 @@
-
-
+<h3>เพิ่มสถานที่จัดแข่งปลากัดสวยงาม</h3>
+<br>
+<form (ngSubmit)="addplace(placeForm)" #placeForm="ngForm">
+    <div class="form-group">
+      <label for="formGroupExampleInput">ชื่อหัวข้อที่จัดแข่ง</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ใส่ชื่อหัวข้อที่จัดแข่ง" name="Name" ngModel>
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">วันที่จัดแข่งและที่อยู่</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ใส่วันที่จัดแข่งและที่อยู่" name="Date" ngModel>
+    </div>
+    <div class="form-group">
+            <label for="exampleFormControlTextarea1">รายละเอียดการแข่งเบื้องต้น</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="ใส่รายละเอียดการแข่งเบื้องต้น"name="Description" ngModel></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">เพิ่ม +</button>
+  </form>

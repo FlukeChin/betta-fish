@@ -1,7 +1,7 @@
 <nav class="nav">
             <a class="nav-link active" routerLink="/account" href="#">User</a>
             <a class="nav-link active" routerLink="/Expert"href="#">Expert</a>
-            <a class="nav-link active" routerLink="/crexpert"href="#">+</a>
+            <a class="nav-link active" routerLink="/registration"href="#">+</a>
           </nav>
           <br>
 <table class='table'>
@@ -13,14 +13,14 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let data of Expert">
+        <tr *ngFor="let data of Experts">
         <td>
         <button type="button" (click)="editexpert(data)" >Edit</button>
         &nbsp;
         <button type="button" (click)="delexpert(data)" >Delete</button>
         </td>
-        <td>{{data.value.Email}}</td>
-        <td>{{data.value.LimitFish}}</td>
+        <td>{{data.value.email}}</td>
+        <td>{{data.value.limitfish}}</td>
         </tr>
         </tbody>
   </table>
